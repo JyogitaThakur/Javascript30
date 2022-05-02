@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Console Tricks!</title>
+</head>
+<body>
+
+  <p onClick="makeGreen()">×BREAK×DOWN×</p>
+
+  <script>
+    const dogs = [{ name: 'Snickers', age: 2 }, { name: 'hugo', age: 8 }];
+
+    function makeGreen() {
+      const p = document.querySelector('p');
+      p.style.color = '#BADA55';
+      p.style.fontSize = '50px';
+    }
+
+    // Regular
+    console.log('welcome to javascript30')
+
+    // Interpolated
+    console.log('welcome to %s' , 'javascript30 challenges')
+
+    // Styled
+    console.log('%c welcome to javascript30 challenges Day-09', 'font-size:15px; font-weight:bold')
+
+    // warning!
+    console.warn("Warning!!!")
+
+    // Error :|
+    console.error("Erorr!!!")
+
+    // Info
+    console.info('Its s free 30 Days Challenge')
+
+    // Testing
+    const p = document.querySelector('p')
+    console.assert(p.classList.contains('para'), "This is wrong")
+
+    // clearing
+    console.clear()
+
+    // Viewing DOM Elements
+    console.log(p)
+    console.dir(p)
+    console.clear()
+
+    // Grouping together
+    dogs.forEach(dog =>{
+        console.groupCollapsed(`${dog.name}`)
+        console.log(`this is ${dog.name} and is ${dog.age} years old.`)
+        console.groupEnd(`${dog.name}`)
+    })
+    // counting
+    console.count('Javascript')
+    console.count('is a popular language')
+    console.count('Javascript')
+    console.count('is a popular language')
+    console.count('Javascript')
+    console.count('is a popular language')
+    console.count('Javascript')
+
+    // timing
+    console.time('fetching Data');
+    fetch('https://api.github.com/users')
+    .then(res => res.json())
+    .then(res => {
+        console.timeEnd('fetching Data')
+        console.log(res)
+    })
+
+    //table
+    console.table(dogs)
+
+  </script>
+</body>
+</html>
