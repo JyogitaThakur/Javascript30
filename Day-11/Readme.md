@@ -1,4 +1,4 @@
-## Day-10 - Custom Video Player
+## Day-11 - Custom Video Player
 
 In this Exercise,we made a custom video player in HTML5 and using JavaScript and CSS added a lot of features and functionalities to the video player.
 
