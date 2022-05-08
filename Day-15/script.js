@@ -75,8 +75,8 @@ function deleteBtn(index) {
   console.log(index);
   let lists = localStorage.getItem("items");
   let list = JSON.parse(lists);
-//   list.splice(index, 1);
-  console.log(list.splice(index ,1))
+  list.splice(index, 1);
+//   console.log(list.splice(index ,1))
   localStorage.setItem("items", JSON.stringify(list));
   populateList(list, itemsList);
 }
