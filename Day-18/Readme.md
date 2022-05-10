@@ -13,11 +13,11 @@ In this Exercise, we learned Array.prototype.map and Array.prototype.reduce to f
     // Hours
     const hours = Math.floor(seconds/3600)
     console.log(hours)
-    seconds = totalSeconds % 3600
+    seconds = seconds % 3600
     // Minutes
     const minutes = Math.floor(seconds / 60)
     //Seconds
-    seconds = totalSeconds % 60
+    seconds = totalseconds % 60
 
     console.log(`${hours} : ${minutes} : ${seconds}`)
 
