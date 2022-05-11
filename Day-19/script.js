@@ -8,13 +8,13 @@ const snap = document.querySelector(".snap");
 function getVideo() {
   //getUserMedia() to get access to audio and video input from the user
   navigator.mediaDevices
-    .getUserMedia({ video: false, audio: false }) // gives a promise
+    .getUserMedia({ video: true, audio: false }) // gives a promise
     .then((localMediaStream) => {
       console.log(localMediaStream);
 
       //localMediaStream is an object. In order for our video to work, it actually needs to be converted into some sort of URL.
       // .createObjectURL convert that media stream into something that this video player can understand.
-      
+
       video.srcObject = localMediaStream;
       // since it is a media stream and is not going to update unless we actually play it. To Solve we use video.play()
       video.play();
