@@ -42,7 +42,7 @@ In this Exercise, we learned to make a pretty neat click and drag to scroll inte
     ```
         slider.addEventListener('mousemove', (e) =>{
 
-            if(!isDown) return // false : stop the function from running
+            if(!isDown) return 
             e.preventDefault()
             const x = e.pageX - slider.offsetLeft
             const walk = (x - startX) * 3 // moves 3pixels
